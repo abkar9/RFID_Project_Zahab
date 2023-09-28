@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.rfid_c72_plugin-merged_res-18:/xml/image_share_filepaths.xml",
+        "source": "com.example.rfid_c72_plugin-browser-1.4.0-7:/xml/image_share_filepaths.xml"
+    },
+    {
+        "merged": "com.example.rfid_c72_plugin-merged_res-18:/xml/device_filter.xml",
+        "source": "com.example.rfid_c72_plugin-jetified-DeviceAPI_ver20220518_release-13:/xml/device_filter.xml"
+    }
+]

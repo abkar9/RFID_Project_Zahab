@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "494749118709",
+    "project_id": "rfid-project-1a940",
+    "storage_bucket": "buckets/rfid-project-1a940.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494749118709:android:fa40710e1fae8697b315bc",
+        "android_client_info": {
+          "package_name": "com.example.rfid_c72_plugin_example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494749118709-t942nuqs4iebd4dt63ai5ktnetr1f0lq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCi0fzO-gqyCuqcmMw7WxfQHllrlVLfq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "494749118709-t942nuqs4iebd4dt63ai5ktnetr1f0lq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "494749118709-1e19oa8v9i10s1jcbfe6e5p7dcs7asn5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.rfidProjectz"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

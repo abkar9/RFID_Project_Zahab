@@ -1,0 +1,258 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.rfid_c72_plugin_example"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml:7:5-66
+15-->/Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml:7:22-64
+16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16-->[:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-80
+16-->[:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:7:22-77
+17
+18    <queries>
+18-->[:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:15
+19        <intent>
+19-->[:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:18
+20            <action android:name="android.intent.action.GET_CONTENT" />
+20-->[:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-72
+20-->[:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:11:21-69
+21
+22            <data android:mimeType="*/*" />
+22-->[:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-44
+22-->[:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:19-41
+23        </intent>
+24    </queries>
+25
+26    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+26-->[:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-83
+26-->[:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:8:22-80
+27    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+27-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:26:5-79
+27-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:26:22-76
+28    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+28-->[:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:12:5-74
+28-->[:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:12:22-71
+29    <uses-permission android:name="android.permission.CAMERA" />
+29-->[:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:13:5-65
+29-->[:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:13:22-62
+30    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+30-->[:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:14:5-76
+30-->[:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:14:22-73
+31
+32    <application
+33        android:name="android.app.Application"
+34        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+34-->[androidx.core:core:1.6.0] /Users/naser/.gradle/caches/transforms-3/69ff597f1e116df3edcbddc1f1b568d0/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+35        android:debuggable="true"
+36        android:icon="@mipmap/ic_launcher"
+37        android:label="rfid_c72_plugin_example" >
+38        <activity
+39            android:name="com.example.rfid_c72_plugin_example.MainActivity"
+40            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+41            android:exported="true"
+42            android:hardwareAccelerated="true"
+43            android:launchMode="singleTop"
+44            android:theme="@style/LaunchTheme"
+45            android:windowSoftInputMode="adjustResize" >
+46
+47            <!--
+48                 Specifies an Android theme to apply to this Activity as soon as
+49                 the Android process has started. This theme is visible to the user
+50                 while the Flutter UI initializes. After that, this theme continues
+51                 to determine the Window background behind the Flutter UI.
+52            -->
+53            <meta-data
+54                android:name="io.flutter.embedding.android.NormalTheme"
+55                android:resource="@style/NormalTheme" />
+56
+57            <intent-filter>
+58                <action android:name="android.intent.action.MAIN" />
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+61            </intent-filter>
+62        </activity>
+63        <!--
+64             Don't delete the meta-data below.
+65             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+66        -->
+67        <meta-data
+68            android:name="flutterEmbedding"
+69            android:value="2" />
+70
+71        <service
+71-->[:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-12:19
+72            android:name="com.google.firebase.components.ComponentDiscoveryService"
+72-->[:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:8:18-89
+73            android:directBootAware="true"
+73-->[com.google.firebase:firebase-common:20.3.3] /Users/naser/.gradle/caches/transforms-3/a8cb387d03fcfc86067e16e2ac1fc491/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:34:13-43
+74            android:exported="false" >
+74-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:68:13-37
+75            <meta-data
+75-->[:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-11:85
+76                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+76-->[:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:17-124
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:17-82
+78            <meta-data
+78-->[:cloud_firestore] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-11:85
+79                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+79-->[:cloud_firestore] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:17-134
+80                android:value="com.google.firebase.components.ComponentRegistrar" />
+80-->[:cloud_firestore] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:17-82
+81            <meta-data
+81-->[:firebase_core] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-11:85
+82                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+82-->[:firebase_core] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:17-124
+83                android:value="com.google.firebase.components.ComponentRegistrar" />
+83-->[:firebase_core] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:17-82
+84            <meta-data
+84-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:69:13-71:85
+85                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+85-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:70:17-109
+86                android:value="com.google.firebase.components.ComponentRegistrar" />
+86-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:71:17-82
+87            <meta-data
+87-->[com.google.firebase:firebase-firestore:24.7.0] /Users/naser/.gradle/caches/transforms-3/ab31be7349f4db99042a9b8a17688f30/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:19:13-21:85
+88                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+88-->[com.google.firebase:firebase-firestore:24.7.0] /Users/naser/.gradle/caches/transforms-3/ab31be7349f4db99042a9b8a17688f30/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:20:17-111
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[com.google.firebase:firebase-firestore:24.7.0] /Users/naser/.gradle/caches/transforms-3/ab31be7349f4db99042a9b8a17688f30/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:21:17-82
+90        </service>
+91
+92        <provider
+92-->[:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-21:20
+93            android:name="com.crazecoder.openfile.FileProvider"
+93-->[:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-64
+94            android:authorities="com.example.rfid_c72_plugin_example.fileProvider.com.crazecoder.openfile"
+94-->[:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-88
+95            android:exported="false"
+95-->[:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-37
+96            android:grantUriPermissions="true" >
+96-->[:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-47
+97            <meta-data
+97-->[:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:53
+98                android:name="android.support.FILE_PROVIDER_PATHS"
+98-->[:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-67
+99                android:resource="@xml/filepaths" />
+99-->[:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:20:17-50
+100        </provider>
+101
+102        <activity
+102-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:29:9-46:20
+103            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+103-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:30:13-80
+104            android:excludeFromRecents="true"
+104-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:31:13-46
+105            android:exported="true"
+105-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:32:13-36
+106            android:launchMode="singleTask"
+106-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:33:13-44
+107            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+107-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:34:13-72
+108            <intent-filter>
+108-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:35:13-45:29
+109                <action android:name="android.intent.action.VIEW" />
+109-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:36:17-69
+109-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:36:25-66
+110
+111                <category android:name="android.intent.category.DEFAULT" />
+111-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:38:17-76
+111-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:38:27-73
+112                <category android:name="android.intent.category.BROWSABLE" />
+112-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:39:17-78
+112-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:39:27-75
+113
+114                <data
+114-->[:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-44
+115                    android:host="firebase.auth"
+116                    android:path="/"
+117                    android:scheme="genericidp" />
+118            </intent-filter>
+119        </activity>
+120        <activity
+120-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:47:9-64:20
+121            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+121-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:48:13-79
+122            android:excludeFromRecents="true"
+122-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:49:13-46
+123            android:exported="true"
+123-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:50:13-36
+124            android:launchMode="singleTask"
+124-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:51:13-44
+125            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+125-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:52:13-72
+126            <intent-filter>
+126-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:53:13-63:29
+127                <action android:name="android.intent.action.VIEW" />
+127-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:36:17-69
+127-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:36:25-66
+128
+129                <category android:name="android.intent.category.DEFAULT" />
+129-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:38:17-76
+129-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:38:27-73
+130                <category android:name="android.intent.category.BROWSABLE" />
+130-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:39:17-78
+130-->[com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:39:27-75
+131
+132                <data
+132-->[:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-44
+133                    android:host="firebase.auth"
+134                    android:path="/"
+135                    android:scheme="recaptcha" />
+136            </intent-filter>
+137        </activity>
+138
+139        <uses-library
+139-->[androidx.window:window:1.0.0-beta04] /Users/naser/.gradle/caches/transforms-3/365b806a73da8ccc1d7962deeca3b05f/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+140            android:name="androidx.window.extensions"
+140-->[androidx.window:window:1.0.0-beta04] /Users/naser/.gradle/caches/transforms-3/365b806a73da8ccc1d7962deeca3b05f/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+141            android:required="false" />
+141-->[androidx.window:window:1.0.0-beta04] /Users/naser/.gradle/caches/transforms-3/365b806a73da8ccc1d7962deeca3b05f/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+142        <uses-library
+142-->[androidx.window:window:1.0.0-beta04] /Users/naser/.gradle/caches/transforms-3/365b806a73da8ccc1d7962deeca3b05f/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+143            android:name="androidx.window.sidecar"
+143-->[androidx.window:window:1.0.0-beta04] /Users/naser/.gradle/caches/transforms-3/365b806a73da8ccc1d7962deeca3b05f/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+144            android:required="false" />
+144-->[androidx.window:window:1.0.0-beta04] /Users/naser/.gradle/caches/transforms-3/365b806a73da8ccc1d7962deeca3b05f/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+145
+146        <provider
+146-->[com.google.firebase:firebase-common:20.3.3] /Users/naser/.gradle/caches/transforms-3/a8cb387d03fcfc86067e16e2ac1fc491/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:25:9-30:39
+147            android:name="com.google.firebase.provider.FirebaseInitProvider"
+147-->[com.google.firebase:firebase-common:20.3.3] /Users/naser/.gradle/caches/transforms-3/a8cb387d03fcfc86067e16e2ac1fc491/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:26:13-77
+148            android:authorities="com.example.rfid_c72_plugin_example.firebaseinitprovider"
+148-->[com.google.firebase:firebase-common:20.3.3] /Users/naser/.gradle/caches/transforms-3/a8cb387d03fcfc86067e16e2ac1fc491/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:27:13-72
+149            android:directBootAware="true"
+149-->[com.google.firebase:firebase-common:20.3.3] /Users/naser/.gradle/caches/transforms-3/a8cb387d03fcfc86067e16e2ac1fc491/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:28:13-43
+150            android:exported="false"
+150-->[com.google.firebase:firebase-common:20.3.3] /Users/naser/.gradle/caches/transforms-3/a8cb387d03fcfc86067e16e2ac1fc491/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:29:13-37
+151            android:initOrder="100" />
+151-->[com.google.firebase:firebase-common:20.3.3] /Users/naser/.gradle/caches/transforms-3/a8cb387d03fcfc86067e16e2ac1fc491/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:30:13-36
+152
+153        <activity
+153-->[com.google.android.gms:play-services-base:18.0.1] /Users/naser/.gradle/caches/transforms-3/173a4b441a0fe07c2d54311e2644703d/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+154            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+154-->[com.google.android.gms:play-services-base:18.0.1] /Users/naser/.gradle/caches/transforms-3/173a4b441a0fe07c2d54311e2644703d/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+155            android:exported="false"
+155-->[com.google.android.gms:play-services-base:18.0.1] /Users/naser/.gradle/caches/transforms-3/173a4b441a0fe07c2d54311e2644703d/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+156            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+156-->[com.google.android.gms:play-services-base:18.0.1] /Users/naser/.gradle/caches/transforms-3/173a4b441a0fe07c2d54311e2644703d/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+157
+158        <meta-data
+158-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naser/.gradle/caches/transforms-3/a6b49bafc0f076e08dffae004f43bfa1/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+159            android:name="com.google.android.gms.version"
+159-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naser/.gradle/caches/transforms-3/a6b49bafc0f076e08dffae004f43bfa1/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+160            android:value="@integer/google_play_services_version" />
+160-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naser/.gradle/caches/transforms-3/a6b49bafc0f076e08dffae004f43bfa1/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+161    </application>
+162
+163</manifest>
