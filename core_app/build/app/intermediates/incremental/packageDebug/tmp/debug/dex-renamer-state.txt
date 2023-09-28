@@ -1,11 +1,11 @@
-#Fri Sep 29 01:17:19 AST 2023
-base.0=/Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/app/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/app/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex
-base.2=/Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/app/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.3=/Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/app/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
-base.4=/Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/app/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
-base.5=/Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/app/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
-base.6=/Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/app/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+#Fri Sep 29 01:48:57 AST 2023
+base.0=/Users/naser/RFID_Project_Zahab_-main/core_app/build/app/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/Users/naser/RFID_Project_Zahab_-main/core_app/build/app/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex
+base.2=/Users/naser/RFID_Project_Zahab_-main/core_app/build/app/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.3=/Users/naser/RFID_Project_Zahab_-main/core_app/build/app/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
+base.4=/Users/naser/RFID_Project_Zahab_-main/core_app/build/app/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
+base.5=/Users/naser/RFID_Project_Zahab_-main/core_app/build/app/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
+base.6=/Users/naser/RFID_Project_Zahab_-main/core_app/build/app/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=0/classes.dex

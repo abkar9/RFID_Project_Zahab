@@ -1,14 +1,14 @@
 -- Merging decision tree log ---
 application
-INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:3:4-33:19
-MERGED from [:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:cloud_firestore] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:cloud_firestore] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_core] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_core] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-22:19
-MERGED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-22:19
+INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:3:4-33:19
+MERGED from [:firebase_auth] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:cloud_firestore] /Users/naser/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:cloud_firestore] /Users/naser/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-22:19
+MERGED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-22:19
 MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:28:5-73:19
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/naser/.gradle/caches/transforms-3/365b806a73da8ccc1d7962deeca3b05f/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
@@ -36,26 +36,26 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/nase
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] /Users/naser/.gradle/caches/transforms-3/69ff597f1e116df3edcbddc1f1b568d0/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 	android:name
-		INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
 manifest
-ADDED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:1-34:12
-MERGED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:1-34:12
-MERGED from [:rfid_c72_plugin] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/rfid_c72_plugin/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-15:12
-MERGED from [:cloud_firestore] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-15:12
-MERGED from [:firebase_core] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-15:12
-MERGED from [:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
-MERGED from [:flutter_plugin_android_lifecycle] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-24:12
-MERGED from [:path_provider_android] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+ADDED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+MERGED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+MERGED from [:rfid_c72_plugin] /Users/naser/RFID_Project_Zahab_-main/core_app/build/rfid_c72_plugin/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_auth] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:cloud_firestore] /Users/naser/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_core] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:file_picker] /Users/naser/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
+MERGED from [:flutter_plugin_android_lifecycle] /Users/naser/RFID_Project_Zahab_-main/core_app/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-24:12
+MERGED from [:path_provider_android] /Users/naser/RFID_Project_Zahab_-main/core_app/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:17:1-75:12
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/naser/.gradle/caches/transforms-3/8512a662a4ed2edd5a81c448feb16eb2/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:2:1-10:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/naser/.gradle/caches/transforms-3/6d69864d27f532be717115d0f7c969f9/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/naser/.gradle/caches/transforms-3/365b806a73da8ccc1d7962deeca3b05f/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
-MERGED from [:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:2:1-16:12
+MERGED from [:libs] /Users/naser/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/62c5f5214b616e5b590aa756b3c6eda6/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:2:1-16:12
 MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/naser/.gradle/caches/transforms-3/ab31be7349f4db99042a9b8a17688f30/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:2:1-25:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/naser/.gradle/caches/transforms-3/a659343a29132e8626add092e7321215/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-common:20.3.3] /Users/naser/.gradle/caches/transforms-3/a8cb387d03fcfc86067e16e2ac1fc491/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:15:1-39:12
@@ -100,43 +100,43 @@ MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /Users/naser/.gradle/caches/t
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/naser/.gradle/caches/transforms-3/b3efe0113279ea20ff60efb5eeaf8b84/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.52.1] /Users/naser/.gradle/caches/transforms-3/4011e050502c087792d19f94b92d3313/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/naser/.gradle/caches/transforms-3/b00dd482fa0c0038c3c754849734356d/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml:1:1-8:12
-INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml:1:1-8:12
-INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml:1:1-8:12
+INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml:1:1-8:12
+INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml:1:1-8:12
+INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml:1:1-8:12
 	package
-		ADDED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:2:5-50
-		INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml
+		ADDED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:2:5-50
+		INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:1-34:12
-		INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+		INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:1-34:12
-		INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+		INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-sdk
-INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
-INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
-MERGED from [:rfid_c72_plugin] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/rfid_c72_plugin/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:rfid_c72_plugin] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/rfid_c72_plugin/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:flutter_plugin_android_lifecycle] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:flutter_plugin_android_lifecycle] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-44
-MERGED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-44
-MERGED from [:path_provider_android] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:path_provider_android] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
+MERGED from [:rfid_c72_plugin] /Users/naser/RFID_Project_Zahab_-main/core_app/build/rfid_c72_plugin/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:rfid_c72_plugin] /Users/naser/RFID_Project_Zahab_-main/core_app/build/rfid_c72_plugin/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] /Users/naser/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] /Users/naser/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:file_picker] /Users/naser/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:file_picker] /Users/naser/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_plugin_android_lifecycle] /Users/naser/RFID_Project_Zahab_-main/core_app/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_plugin_android_lifecycle] /Users/naser/RFID_Project_Zahab_-main/core_app/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-44
+MERGED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-44
+MERGED from [:path_provider_android] /Users/naser/RFID_Project_Zahab_-main/core_app/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] /Users/naser/RFID_Project_Zahab_-main/core_app/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/naser/.gradle/caches/transforms-3/8512a662a4ed2edd5a81c448feb16eb2/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:5:5-44
@@ -145,8 +145,8 @@ MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/naser/.gradle/cach
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/naser/.gradle/caches/transforms-3/6d69864d27f532be717115d0f7c969f9/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/naser/.gradle/caches/transforms-3/365b806a73da8ccc1d7962deeca3b05f/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/naser/.gradle/caches/transforms-3/365b806a73da8ccc1d7962deeca3b05f/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
-MERGED from [:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:7:5-9:41
-MERGED from [:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:7:5-9:41
+MERGED from [:libs] /Users/naser/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/62c5f5214b616e5b590aa756b3c6eda6/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:7:5-9:41
+MERGED from [:libs] /Users/naser/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/62c5f5214b616e5b590aa756b3c6eda6/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/naser/.gradle/caches/transforms-3/ab31be7349f4db99042a9b8a17688f30/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/naser/.gradle/caches/transforms-3/ab31be7349f4db99042a9b8a17688f30/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/naser/.gradle/caches/transforms-3/a659343a29132e8626add092e7321215/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
@@ -235,18 +235,18 @@ MERGED from [io.grpc:grpc-android:1.52.1] /Users/naser/.gradle/caches/transforms
 MERGED from [io.grpc:grpc-android:1.52.1] /Users/naser/.gradle/caches/transforms-3/4011e050502c087792d19f94b92d3313/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/naser/.gradle/caches/transforms-3/b00dd482fa0c0038c3c754849734356d/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/naser/.gradle/caches/transforms-3/b00dd482fa0c0038c3c754849734356d/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
-INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml
-INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml
 	tools:overrideLibrary
 		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:23:9-61
 	android:targetSdkVersion
-		INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml:7:5-66
+ADDED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml:7:5-66
 MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:25:5-67
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/naser/.gradle/caches/transforms-3/8512a662a4ed2edd5a81c448feb16eb2/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:7:5-67
@@ -254,13 +254,13 @@ MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/naser/.gradle
 MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/naser/.gradle/caches/transforms-3/ab31be7349f4db99042a9b8a17688f30/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:13:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/naser/.gradle/caches/transforms-3/ab31be7349f4db99042a9b8a17688f30/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:13:5-67
 	android:name
-		ADDED from /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml:7:22-64
+		ADDED from /Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/debug/AndroidManifest.xml:7:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_core] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_core] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-12:19
+ADDED from [:firebase_auth] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:cloud_firestore] /Users/naser/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:cloud_firestore] /Users/naser/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:66:9-72:19
 MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:66:9-72:19
 MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/naser/.gradle/caches/transforms-3/ab31be7349f4db99042a9b8a17688f30/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:16:9-22:19
@@ -274,71 +274,71 @@ MERGED from [com.google.firebase:firebase-common:20.3.3] /Users/naser/.gradle/ca
 	android:directBootAware
 		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/naser/.gradle/caches/transforms-3/a8cb387d03fcfc86067e16e2ac1fc491/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:34:13-43
 	android:name
-		ADDED from [:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:8:18-89
+		ADDED from [:firebase_auth] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:8:18-89
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
-ADDED from [:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-11:85
+ADDED from [:firebase_auth] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:17-82
+		ADDED from [:firebase_auth] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_auth] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:17-124
+		ADDED from [:firebase_auth] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:17-124
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
-ADDED from [:cloud_firestore] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-11:85
+ADDED from [:cloud_firestore] /Users/naser/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:cloud_firestore] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:17-82
+		ADDED from [:cloud_firestore] /Users/naser/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:cloud_firestore] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:17-134
+		ADDED from [:cloud_firestore] /Users/naser/RFID_Project_Zahab_-main/core_app/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:17-134
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
-ADDED from [:firebase_core] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-11:85
+ADDED from [:firebase_core] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:firebase_core] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:17-82
+		ADDED from [:firebase_core] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_core] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:17-124
+		ADDED from [:firebase_core] /Users/naser/RFID_Project_Zahab_-main/core_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:17-124
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from [:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-80
-MERGED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-80
-MERGED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-80
+ADDED from [:file_picker] /Users/naser/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-80
+MERGED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-80
+MERGED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-80
 	android:name
-		ADDED from [:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:7:22-77
+		ADDED from [:file_picker] /Users/naser/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:7:22-77
 queries
-ADDED from [:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:15
+ADDED from [:file_picker] /Users/naser/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:15
 intent#action:name:android.intent.action.GET_CONTENT+data:mimeType:*/*
-ADDED from [:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:18
+ADDED from [:file_picker] /Users/naser/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:18
 action#android.intent.action.GET_CONTENT
-ADDED from [:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-72
+ADDED from [:file_picker] /Users/naser/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-72
 	android:name
-		ADDED from [:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:11:21-69
+		ADDED from [:file_picker] /Users/naser/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:11:21-69
 data
-ADDED from [:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-44
+ADDED from [:file_picker] /Users/naser/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-44
 	android:mimeType
-		ADDED from [:file_picker] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:19-41
+		ADDED from [:file_picker] /Users/naser/RFID_Project_Zahab_-main/core_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:19-41
 uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
-ADDED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-83
+ADDED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-83
 	android:name
-		ADDED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:8:22-80
+		ADDED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:8:22-80
 provider#com.crazecoder.openfile.FileProvider
-ADDED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-21:20
+ADDED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-21:20
 	android:grantUriPermissions
-		ADDED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-47
+		ADDED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-47
 	android:authorities
-		ADDED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-88
+		ADDED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-88
 	android:exported
-		ADDED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-37
+		ADDED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-37
 	tools:replace
-		ADDED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-48
+		ADDED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-48
 	android:name
-		ADDED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-64
+		ADDED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-64
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:53
+ADDED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:53
 	android:resource
-		ADDED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:20:17-50
+		ADDED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:20:17-50
 	android:name
-		ADDED from [:open_file] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-67
+		ADDED from [:open_file] /Users/naser/RFID_Project_Zahab_-main/core_app/build/open_file/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-67
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/naser/.gradle/caches/transforms-3/c98ab67bc0d314d86057799b4e83fe46/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:26:5-79
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/naser/.gradle/caches/transforms-3/8512a662a4ed2edd5a81c448feb16eb2/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:8:5-79
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/naser/.gradle/caches/transforms-3/8512a662a4ed2edd5a81c448feb16eb2/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:8:5-79
-MERGED from [:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:11:5-79
-MERGED from [:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:11:5-79
+MERGED from [:libs] /Users/naser/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/62c5f5214b616e5b590aa756b3c6eda6/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:11:5-79
+MERGED from [:libs] /Users/naser/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/62c5f5214b616e5b590aa756b3c6eda6/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:11:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/naser/.gradle/caches/transforms-3/ab31be7349f4db99042a9b8a17688f30/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:12:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/naser/.gradle/caches/transforms-3/ab31be7349f4db99042a9b8a17688f30/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:12:5-79
 MERGED from [io.grpc:grpc-android:1.52.1] /Users/naser/.gradle/caches/transforms-3/4011e050502c087792d19f94b92d3313/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:9:5-79
@@ -404,17 +404,17 @@ ADDED from [androidx.window:window:1.0.0-beta04] /Users/naser/.gradle/caches/tra
 	android:name
 		ADDED from [androidx.window:window:1.0.0-beta04] /Users/naser/.gradle/caches/transforms-3/365b806a73da8ccc1d7962deeca3b05f/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from [:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:12:5-74
+ADDED from [:libs] /Users/naser/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/62c5f5214b616e5b590aa756b3c6eda6/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:12:5-74
 	android:name
-		ADDED from [:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:12:22-71
+		ADDED from [:libs] /Users/naser/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/62c5f5214b616e5b590aa756b3c6eda6/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:12:22-71
 uses-permission#android.permission.CAMERA
-ADDED from [:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:13:5-65
+ADDED from [:libs] /Users/naser/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/62c5f5214b616e5b590aa756b3c6eda6/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:13:5-65
 	android:name
-		ADDED from [:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:13:22-62
+		ADDED from [:libs] /Users/naser/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/62c5f5214b616e5b590aa756b3c6eda6/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:13:22-62
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from [:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:14:5-76
+ADDED from [:libs] /Users/naser/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/62c5f5214b616e5b590aa756b3c6eda6/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:14:5-76
 	android:name
-		ADDED from [:libs] /Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:14:22-73
+		ADDED from [:libs] /Users/naser/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/62c5f5214b616e5b590aa756b3c6eda6/transformed/jetified-DeviceAPI_ver20220518_release/AndroidManifest.xml:14:22-73
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
 ADDED from [com.google.firebase:firebase-firestore:24.7.0] /Users/naser/.gradle/caches/transforms-3/ab31be7349f4db99042a9b8a17688f30/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:19:13-21:85
 	android:value

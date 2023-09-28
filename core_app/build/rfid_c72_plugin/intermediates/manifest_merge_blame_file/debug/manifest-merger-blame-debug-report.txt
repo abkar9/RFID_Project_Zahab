@@ -3,6 +3,6 @@
 3    package="com.example.rfid_c72_plugin" >
 4
 5    <uses-sdk android:minSdkVersion="19" />
-5-->/Users/naser/StudioProjects/RFID_Project_Zahab_-main/android/src/main/AndroidManifest.xml
+5-->/Users/naser/RFID_Project_Zahab_-main/android/src/main/AndroidManifest.xml
 6
 7</manifest>

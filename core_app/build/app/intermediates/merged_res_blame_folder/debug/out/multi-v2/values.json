@@ -4,7 +4,7 @@
             "outputFile": "com.example.rfid_c72_plugin_example.app-mergeDebugResources-15:/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/7c0b95a94c938157999def655dc64874/transformed/jetified-DeviceAPI_ver20220518_release/res/values/values.xml",
+                    "source": "/Users/naser/RFID_Project_Zahab_-main/core_app/build/libs/.transforms/62c5f5214b616e5b590aa756b3c6eda6/transformed/jetified-DeviceAPI_ver20220518_release/res/values/values.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -112,7 +112,7 @@
                     }
                 },
                 {
-                    "source": "/Users/naser/StudioProjects/RFID_Project_Zahab_-main/core_app/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/naser/RFID_Project_Zahab_-main/core_app/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
