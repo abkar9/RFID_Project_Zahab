@@ -13,6 +13,7 @@ class TagEpc {
     required this.rssi,
   });
 
+
   factory TagEpc.fromMap(Map<String, dynamic> json) => TagEpc(
     id: json["KEY_ID"],
     epc: json["KEY_EPC"],
