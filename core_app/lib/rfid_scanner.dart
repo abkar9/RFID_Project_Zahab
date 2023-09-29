@@ -147,4 +147,6 @@ class _RfidScannerState extends State<RfidScanner> {
       ))),
     );
   }
+
+
 }
