@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
-import 'package:rfid_c72_plugin/rfid_c72_plugin.dart';
-import 'package:rfid_c72_plugin/tag_epc.dart';
 import 'package:rfid_c72_plugin_example/components/colors_theme.dart';
 import 'package:rfid_c72_plugin_example/rfid_scanner.dart';
 import 'package:rfid_c72_plugin_example/view/navPage/addPage.dart';
-import 'package:rfid_c72_plugin_example/view/navPage/readPage.dart';
 import 'package:rfid_c72_plugin_example/view/navPage/scanPage.dart';
 
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 
 import '../components/widgets/castom_appbar.dart';
 import '../components/widgets/custom_drawer.dart';
-import '../model/firebase/flirebase_get.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -31,7 +26,7 @@ class _MainPageState extends State<MainPage> {
   }
 
   @override
-  List<Widget> page = const [RfidScanner(), ScanPage(), AddPage()];
+  List<Widget> pages = const [RfidScanner(), ScanPage(), AddPage()];
   int currentIndex = 0;
   bool chick = false;
   void onTap(int index) {
@@ -58,7 +53,7 @@ class _MainPageState extends State<MainPage> {
           icon:
               Icon(Icons.arrow_forward, size: 30, color: ColorThemeRFID.brown),
           onPressed: () {}),
-      body: page[currentIndex],
+      body: pages[currentIndex],
       bottomNavigationBar: AnimatedBottomNavigationBar(
           rightCornerRadius: 20,
           leftCornerRadius: 20,

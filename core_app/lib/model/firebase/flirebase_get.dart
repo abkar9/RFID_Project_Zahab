@@ -16,7 +16,6 @@ class FirebaseMethods {
     var doneGet = await updateData.get();
 
     if (doneGet.get("tag1".isEmpty)) {
-      print("1111111111111111111111111111111111111111111");
       updateData.update({"tag1": addTag});
     } else if (doneGet.get("tag2") == "") {
       updateData.update({"tag2": addTag});

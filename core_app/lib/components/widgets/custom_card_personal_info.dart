@@ -36,6 +36,7 @@ Widget customCardPersonalInfo(BuildContext context,
               padding: EdgeInsets.only(top: CustomSizes.paddingSize! * 4),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   customText(
                       text: name,
@@ -112,13 +113,13 @@ Widget customCardPersonalInfo(BuildContext context,
           left: .0,
           right: .0,
           child: Container(
-            height: CustomSizes.height! / 6,
+            height: CustomSizes.height! / 7,
             child: CircleAvatar(
               radius: CustomSizes.radiusSize,
               backgroundColor: ColorThemeRFID.brown,
               child: Icon(
                 Icons.person,
-                size: CustomSizes.sizeIcon! * 2,
+                size: CustomSizes.sizeIcon! * 1.5,
                 color: Colors.white,
               ),
             ),
