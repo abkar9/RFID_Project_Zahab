@@ -23,6 +23,13 @@ class RfidScanner extends StatefulWidget {
 
 
 class _RfidScannerState extends State<RfidScanner> {
+
+  MethodChannel channel = MethodChannel('com.example.channelName');
+
+// Listen for messages from the native side
+
+
+  ////////////////////
   FirebaseMethods _firebaseMethods = FirebaseMethods();
   final bool _isHaveSavedData = false;
   final bool _isStarted = false;
@@ -86,6 +93,15 @@ class _RfidScannerState extends State<RfidScanner> {
   Widget build(BuildContext context) {
     var usersData =
         Provider.of<ProviderModel>(context, listen: false).usersOfData;
+    channel.setMethodCallHandler((MethodCall call) async {
+      if (call.method == 'dispatchKeyEvent') {
+        // Retrieve the data sent from the native side
+        String data = call.arguments['key'];
+
+        // Process the data as needed
+        print('Received data: $data');
+      }
+    });
 
     return Scaffold(
       //////////////////////////////////////////////////////////
