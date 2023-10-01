@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -30,9 +29,7 @@ class InfoAddTag extends StatefulWidget {
 class _InfoAddTagState extends State<InfoAddTag> {
   var doc;
   _InfoAddTagState(this.doc);
-  final bool _isHaveSavedData = false;
-  final bool _isStarted = false;
-  final bool _isEmptyTags = false;
+
   String _platformVersion = 'Unknown';
   bool _isConnected = false;
   bool _isLoading = true;
@@ -88,7 +85,6 @@ class _InfoAddTagState extends State<InfoAddTag> {
     //});
   }
 
-  bool _isContinuousCall = false;
   String tagCode = '';
 
   @override
@@ -100,7 +96,6 @@ class _InfoAddTagState extends State<InfoAddTag> {
     var pro = Provider.of<ProviderModel>(context).change;
     String t1 = "${doc["tag1"]}";
     String t2 = "${doc["tag2"]}";
-
     String t3 = "${doc["tag3"]}";
 
     return Scaffold(
@@ -119,8 +114,10 @@ class _InfoAddTagState extends State<InfoAddTag> {
                   idNumber: "${doc["idNumber"]}",
                   phoneNumber: "${doc["phoneNumber"]}",
                   bookingNumber: "${doc["bookingNumber"]}"),
-              customTagsAdd(context,
-                  tag1: t1, tag2: "${doc["tag2"]}", tag3: "${doc["tag3"]}"),
+              customTagsAdd(context, tag1: t1, tag2: t2, tag3: t3),
+              const SizedBox(
+                height: 30,
+              ),
               Container(
                   width: CustomSizes.width,
                   alignment: Alignment.center,
@@ -176,8 +173,6 @@ class _InfoAddTagState extends State<InfoAddTag> {
           FloatingActionButton(
             backgroundColor: ColorThemeRFID.brown,
             onPressed: () async {
-              print("kkkkkkkkkkkkkkkkk${tagCode}");
-
               if (tagCode.isNotEmpty && _EPC.first.isNotEmpty) {
                 customShowDialog(
                     context: context,
@@ -190,7 +185,7 @@ class _InfoAddTagState extends State<InfoAddTag> {
                           doc: "${doc["idNumber"]}".toString(),
                           numberOfTag: "${pro.toString()}");
                       Provider.of<ProviderModel>(context, listen: false)
-                          .increment('الكود بعد المسح');
+                          .increment(code);
                       Provider.of<ProviderModel>(context, listen: false)
                           .changeValue(
                               chick: pro.toString(), tag: tagCode.toString());

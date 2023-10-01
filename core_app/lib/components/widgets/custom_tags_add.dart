@@ -33,6 +33,7 @@ Widget customTagsAdd(
         width: CustomSizes.width!,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,

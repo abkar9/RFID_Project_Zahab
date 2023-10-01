@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rfid_c72_plugin/rfid_c72_plugin.dart';
@@ -12,8 +11,6 @@ import 'package:rfid_c72_plugin_example/provider/model_provider.dart';
 import 'package:rfid_c72_plugin_example/view/info_read_page.dart';
 import 'package:provider/provider.dart';
 
-
-
 class RfidScanner extends StatefulWidget {
   const RfidScanner({Key? key}) : super(key: key);
 
@@ -21,20 +18,10 @@ class RfidScanner extends StatefulWidget {
   State<RfidScanner> createState() => _RfidScannerState();
 }
 
-
 class _RfidScannerState extends State<RfidScanner> {
+  MethodChannel channel = MethodChannel('rfid');
 
-  MethodChannel channel = MethodChannel('com.example.channelName');
-
-// Listen for messages from the native side
-
-
-  ////////////////////
-  FirebaseMethods _firebaseMethods = FirebaseMethods();
-  final bool _isHaveSavedData = false;
-  final bool _isStarted = false;
-  final bool _isEmptyTags = false;
-  String _platformVersion =      'Unknown';
+  String _platformVersion = 'Unknown';
   bool _isConnected = false;
   bool _isLoading = true;
   int _totalEPC = 0, _invalidEPC = 0, _scannedEPC = 0;
@@ -73,8 +60,6 @@ class _RfidScannerState extends State<RfidScanner> {
 
   List<TagEpc> _data = [];
 
-  final List<String> _EPC = [];
-
   void updateTags(dynamic result) async {
     setState(() {
       _data = TagEpc.parseTags(result);
@@ -86,8 +71,6 @@ class _RfidScannerState extends State<RfidScanner> {
   void updateIsConnected(dynamic isConnected) {
     _isConnected = isConnected;
   }
-
-  bool _isContinuousCall = false;
 
   @override
   Widget build(BuildContext context) {
@@ -112,43 +95,44 @@ class _RfidScannerState extends State<RfidScanner> {
               backgroundColor: ColorThemeRFID.brown,
               child: Icon(Icons.add),
               onPressed: () async {
-                await RfidC72Plugin.startSingle;
-                if (_data.isNotEmpty) {
-                  String tagData = _data.first.epc;
-                  print(tagData);
-                  if (usersData!.docs.isNotEmpty) {
-                    usersData.docs.forEach((element) {
-                      if (element["tag1"] == tagData) {
-                        Navigator.of(context).push(PageRouteBuilder(
-                          pageBuilder:
-                              (context, animation, secondaryAnimation) =>
-                                  InfoReadPage(
-                            doc: element,
-                          ),
-                        ));
-                      } else if (element["tag2"] == tagData) {
-                        Navigator.of(context).push(PageRouteBuilder(
-                          pageBuilder:
-                              (context, animation, secondaryAnimation) =>
-                                  InfoReadPage(
-                            doc: element,
-                          ),
-                        ));
-                      } else if (element["tag3"] == tagData) {
-                        Navigator.of(context).push(PageRouteBuilder(
-                          pageBuilder:
-                              (context, animation, secondaryAnimation) =>
-                                  InfoReadPage(
-                            doc: element,
-                          ),
-                        ));
-                      }
-                    });
+                await RfidC72Plugin.startSingle.then((value) {
+                  if (_data.isNotEmpty) {
+                    String tagData = _data.first.epc;
+                    print(tagData);
+                    if (usersData!.docs.isNotEmpty) {
+                      usersData.docs.forEach((element) {
+                        if (element["tag1"] == tagData) {
+                          Navigator.of(context).push(PageRouteBuilder(
+                            pageBuilder:
+                                (context, animation, secondaryAnimation) =>
+                                    InfoReadPage(
+                              doc: element,
+                            ),
+                          ));
+                        } else if (element["tag2"] == tagData) {
+                          Navigator.of(context).push(PageRouteBuilder(
+                            pageBuilder:
+                                (context, animation, secondaryAnimation) =>
+                                    InfoReadPage(
+                              doc: element,
+                            ),
+                          ));
+                        } else if (element["tag3"] == tagData) {
+                          Navigator.of(context).push(PageRouteBuilder(
+                            pageBuilder:
+                                (context, animation, secondaryAnimation) =>
+                                    InfoReadPage(
+                              doc: element,
+                            ),
+                          ));
+                        }
+                      });
+                    }
+                    _data.clear();
+                  } else {
+                    showBottom(context);
                   }
-                  _data.clear();
-                } else {
-                  showBottom(context);
-                }
+                });
               }),
         ],
       ),
@@ -163,6 +147,4 @@ class _RfidScannerState extends State<RfidScanner> {
       ))),
     );
   }
-
-
 }

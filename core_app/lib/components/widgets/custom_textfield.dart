@@ -1,15 +1,8 @@
-import 'dart:math';
-
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:rfid_c72_plugin_example/components/colors_theme.dart';
 import 'package:rfid_c72_plugin_example/components/widgets/custom_text.dart';
-import 'package:rfid_c72_plugin_example/model/firebase/flirebase_get.dart';
 import 'package:rfid_c72_plugin_example/provider/model_provider.dart';
 import 'package:rfid_c72_plugin_example/view/info_add_tag.dart';
-import 'package:rfid_c72_plugin_example/view/info_read_page.dart';
 import 'package:provider/provider.dart';
 
 import '../custom_sizes.dart';

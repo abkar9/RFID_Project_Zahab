@@ -2,9 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rfid_c72_plugin_example/components/custom_sizes.dart';
 
-import '../colors_theme.dart';
-import '../string_values.dart';
-import 'custom_text.dart';
 import 'custom_text_card.dart';
 
 Widget customCardAnotherPersonalInfo(BuildContext context,

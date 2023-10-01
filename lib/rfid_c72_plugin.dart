@@ -12,6 +12,7 @@ class RfidC72Plugin {
 
   static const EventChannel connectedStatusStream =
       EventChannel('ConnectedStatus');
+
   static const EventChannel tagsStatusStream = EventChannel('TagsStatus');
 
   static Future<bool?> get isStarted async {

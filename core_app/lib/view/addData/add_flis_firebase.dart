@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:flutter/services.dart' show SystemUiOverlayStyle, rootBundle;
 import 'package:csv/csv.dart';
 import 'package:rfid_c72_plugin_example/components/colors_theme.dart';
@@ -24,7 +25,6 @@ class _bulkUploadState extends State<bulkUpload> {
   String? filePath;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     FirebaseMethods.initAndGetData;
   }
