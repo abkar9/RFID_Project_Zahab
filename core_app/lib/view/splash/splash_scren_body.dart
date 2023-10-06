@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rfid_c72_plugin_example/components/colors_theme.dart';
 import 'package:rfid_c72_plugin_example/components/custom_sizes.dart';
+import 'package:rfid_c72_plugin_example/components/netWork.dart';
 import 'package:rfid_c72_plugin_example/view/home.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -18,6 +19,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void initState() {
     super.initState();
+    chickInternet();
     animationController = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 1500));
     animation = Tween<double>(begin: .3, end: 1).animate(animationController!);

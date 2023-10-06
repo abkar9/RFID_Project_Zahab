@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
@@ -6,11 +7,9 @@ import 'package:rfid_c72_plugin/rfid_c72_plugin.dart';
 import 'package:rfid_c72_plugin/tag_epc.dart';
 import 'package:rfid_c72_plugin_example/components/colors_theme.dart';
 import 'package:rfid_c72_plugin_example/components/custom_sizes.dart';
+import 'package:rfid_c72_plugin_example/components/netWork.dart';
+import 'package:rfid_c72_plugin_example/components/widgets/custom_column_is_not_data.dart';
 import 'package:rfid_c72_plugin_example/view/info_read_page.dart';
-import 'package:provider/provider.dart';
-
-import '../../provider/model_provider.dart';
-
 import 'package:rfid_c72_plugin_example/model/firebase/flirebase_get.dart';
 
 class ScanPage extends StatefulWidget {
@@ -21,21 +20,22 @@ class ScanPage extends StatefulWidget {
 }
 
 class _ScanPageState extends State<ScanPage> {
-  FirebaseMethods _firebaseMethods = FirebaseMethods();
-  final bool _isHaveSavedData = false;
-  final bool _isStarted = false;
-  final bool _isEmptyTags = false;
-  String _platformVersion = 'Unknown';
-  bool _isConnected = false;
-  bool _isLoading = true;
-  int _totalEPC = 0, _invalidEPC = 0, _scannedEPC = 0;
+  FirebaseMethods firebaseMethods = FirebaseMethods();
+  final bool isHaveSavedData = false;
+  final bool isStarted = false;
+  final bool isEmptyTags = false;
+  String platformVersion = 'Unknown';
+  bool isConnected = false;
+  bool isLoading = true;
+  int totalEPC = 0, invalidEPC = 0, scannedEPC = 0;
   FirebaseMethods firebaseFirestore = FirebaseMethods();
 
   @override
   void initState() {
     super.initState();
     initPlatformState();
-    FirebaseMethods.initAndGetData;
+    rusles == null ? chickInternet() : null;
+    FirebaseMethods().initAndGetData;
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
@@ -57,8 +57,8 @@ class _ScanPageState extends State<ScanPage> {
     if (!mounted) return;
 
     setState(() {
-      _platformVersion = platformVersion;
-      _isLoading = false;
+      platformVersion = platformVersion;
+      isLoading = false;
     });
   }
 
@@ -68,92 +68,69 @@ class _ScanPageState extends State<ScanPage> {
   void updateTags(dynamic result) async {
     setState(() {
       _data = TagEpc.parseTags(result);
-      _totalEPC = _data.toSet().toList().length;
+      totalEPC = _data.toSet().toList().length;
       print(_data);
     });
   }
 
   void updateIsConnected(dynamic isConnected) {
     //setState(() {
-    _isConnected = isConnected;
+    isConnected = isConnected;
     //});
   }
 
-  bool _isContinuousCall = false;
   @override
   Widget build(BuildContext context) {
-    var usersData =
-        Provider.of<ProviderModel>(context, listen: false).usersOfData;
-    return Scaffold(
-      //////////////////////////////////////////////////////////
-      floatingActionButton: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          FloatingActionButton(
-              backgroundColor:
-                  _isContinuousCall ? Colors.red : ColorThemeRFID.brown,
-              child: _isContinuousCall ? Icon(Icons.stop) : Icon(Icons.loop),
-              onPressed: () async {
-                bool? isStarted = _isContinuousCall == true
-                    ? await RfidC72Plugin.stop
-                    : await RfidC72Plugin.startContinuous;
-                setState(() {
-                  _isContinuousCall = !_isContinuousCall;
-                });
-              }),
-          SizedBox(
-            height: 10,
-          ),
-          FloatingActionButton(
-              backgroundColor: Colors.red,
-              child: Icon(Icons.cleaning_services),
-              onPressed: () async {
-                await RfidC72Plugin.clearData;
-                setState(() {
-                  _data.clear();
-                  //     _logs.clear();
-                });
-              }),
-        ],
-      ),
-      body: _data.isEmpty
-          ? Container(
-              child: Center(
-                  child: Lottie.asset(
-              'assets/lottie/EFXISswRKM.json',
-            )))
-          : Column(
-              children: [
-                SizedBox(
-                  height: 2,
-                ),
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 50,
-                  color: ColorThemeRFID.brown,
-                  child: Center(
-                    child: Text(
-                      ' عدد التاقات المقروءة: $_totalEPC',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        ..._data.map((TagEpc tag) {
-                          _EPC.add(tag.epc.replaceAll(RegExp('EPC:'), ''));
+    return StreamBuilder<ConnectivityResult>(
+        stream: Connectivity().onConnectivityChanged,
+        builder: (context, snapshot) {
+          ////////////////// chick if  network is working //////////
+          if (snapshot.data == ConnectivityResult.none ||
+              snapshot.data == null && rusles == ConnectivityResult.none) {
+            return Scaffold(
+              body: customColumnIsNotData(),
+            );
+          } else {
+            return _data.isEmpty
+                ? Container(
+                    child: Center(
+                        child: Lottie.asset(
+                    'assets/lottie/EFXISswRKM.json',
+                  )))
+                : Column(
+                    children: [
+                      SizedBox(
+                        height: 2,
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: 50,
+                        color: ColorThemeRFID.brown,
+                        child: Center(
+                          child: Text(
+                            ' عدد التاقات المقروءة: $totalEPC',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: SingleChildScrollView(
+                          child: Column(
+                            children: [
+                              ..._data.map((TagEpc tag) {
+                                _EPC.add(
+                                    tag.epc.replaceAll(RegExp('EPC:'), ''));
 
-                          return getUserbyTag(tag);
-                        })
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-    );
+                                return getUserbyTag(tag);
+                              })
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+          }
+        });
   }
 
   Widget getUserbyTag(TagEpc tag) {
@@ -168,7 +145,7 @@ class _ScanPageState extends State<ScanPage> {
             height: CustomSizes.height! / 12,
             child: Expanded(
                 child: StreamBuilder<QuerySnapshot>(
-              stream: FirebaseMethods.initAndGetData.snapshots(),
+              stream: FirebaseMethods().initAndGetData.snapshots(),
               builder: (context, snapshot) {
                 if (snapshot.hasError) {
                   return Text('Error: ${snapshot.error}');

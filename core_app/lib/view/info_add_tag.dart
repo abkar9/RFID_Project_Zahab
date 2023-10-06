@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rfid_c72_plugin/rfid_c72_plugin.dart';
@@ -18,28 +17,27 @@ import '../components/widgets/custom_card_personal_info.dart';
 import 'package:provider/provider.dart';
 
 class InfoAddTag extends StatefulWidget {
-  InfoAddTag({super.key, this.doc});
-
-  var doc;
+  InfoAddTag({
+    super.key,
+  });
 
   @override
-  State<InfoAddTag> createState() => _InfoAddTagState(doc);
+  State<InfoAddTag> createState() => _InfoAddTagState();
 }
 
 class _InfoAddTagState extends State<InfoAddTag> {
-  var doc;
-  _InfoAddTagState(this.doc);
+  _InfoAddTagState();
 
-  String _platformVersion = 'Unknown';
-  bool _isConnected = false;
-  bool _isLoading = true;
-  int _totalEPC = 0, _invalidEPC = 0, _scannedEPC = 0;
+  String platformVersion = 'Unknown';
+  bool isConnected = false;
+  bool isLoading = true;
+  int totalEPC = 0, invalidEPC = 0, scannedEPC = 0;
   FirebaseMethods firebaseFirestore = FirebaseMethods();
   @override
   void initState() {
     super.initState();
     initPlatformState();
-    FirebaseMethods.initAndGetData;
+    FirebaseMethods().initAndGetData;
     FirebaseMethods.initAndGetDataTag;
   }
 
@@ -62,8 +60,8 @@ class _InfoAddTagState extends State<InfoAddTag> {
     if (!mounted) return;
 
     setState(() {
-      _platformVersion = platformVersion;
-      _isLoading = false;
+      platformVersion = platformVersion;
+      isLoading = false;
     });
   }
 
@@ -74,14 +72,14 @@ class _InfoAddTagState extends State<InfoAddTag> {
   void updateTags(dynamic result) async {
     setState(() {
       _data = TagEpc.parseTags(result);
-      _totalEPC = _data.toSet().toList().length;
+      totalEPC = _data.toSet().toList().length;
       print(_data);
     });
   }
 
   void updateIsConnected(dynamic isConnected) {
     //setState(() {
-    _isConnected = isConnected;
+    isConnected = isConnected;
     //});
   }
 
@@ -90,10 +88,11 @@ class _InfoAddTagState extends State<InfoAddTag> {
   @override
   Widget build(BuildContext context) {
     var usersData = Provider.of<ProviderModel>(context, listen: false);
-    FirebaseMethods.initAndGetData;
+    FirebaseMethods().initAndGetData;
     CustomSizes().init;
     String code = "الكود بعد المسح";
     var pro = Provider.of<ProviderModel>(context).change;
+    var doc = Provider.of<ProviderModel>(context).element;
     String t1 = "${doc["tag1"]}";
     String t2 = "${doc["tag2"]}";
     String t3 = "${doc["tag3"]}";
@@ -146,29 +145,26 @@ class _InfoAddTagState extends State<InfoAddTag> {
         ),
       ),
       floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           FloatingActionButton(
             child: Icon(Icons.add),
             backgroundColor: ColorThemeRFID.brown,
             onPressed: () async {
-              await RfidC72Plugin.startSingle;
-              if (_data.isNotEmpty) {
-                setState(() {
-                  tagCode = _data.first.epc;
-                  _EPC.add(_data.first.epc);
-                });
-                Provider.of<ProviderModel>(context, listen: false)
-                    .increment(_data.first.epc);
-                _data.clear();
-                setState(() {});
-              } else {
-                showBottom(context, text: "فشل المسح ");
-              }
+              await RfidC72Plugin.startSingle.then((value) {
+                if (_data.isNotEmpty) {
+                  setState(() {
+                    tagCode = _data.first.epc;
+                    _EPC.add(_data.first.epc);
+                  });
+                  Provider.of<ProviderModel>(context, listen: false)
+                      .increment(_data.first.epc);
+                  _data.clear();
+                } else {
+                  showBottom(context, text: "فشل المسح ");
+                }
+              });
             },
-          ),
-          const SizedBox(
-            width: 30,
           ),
           FloatingActionButton(
             backgroundColor: ColorThemeRFID.brown,
@@ -190,7 +186,6 @@ class _InfoAddTagState extends State<InfoAddTag> {
                           .changeValue(
                               chick: pro.toString(), tag: tagCode.toString());
                       _EPC.clear();
-                      Navigator.pop(context);
                       Navigator.of(context).pushAndRemoveUntil(
                           PageRouteBuilder(
                             pageBuilder:

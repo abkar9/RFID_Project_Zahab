@@ -26,7 +26,7 @@ class _bulkUploadState extends State<bulkUpload> {
   @override
   void initState() {
     super.initState();
-    FirebaseMethods.initAndGetData;
+    FirebaseMethods().initAndGetData;
   }
   // This function is triggered when the  button is pressed
 
@@ -79,11 +79,12 @@ class _bulkUploadState extends State<bulkUpload> {
                                     mnamMona: element[9].toString(),
                                     arafaCamp: element[13].toString(),
                                     almajlisarafa: element[14].toString(),
-                                    tag1: element[10].toString(),
-                                    tag2: element[11].toString(),
-                                    tag3: element[12].toString(),
+                                    tag1: '',
+                                    tag2: '',
+                                    tag3: '',
                                     mnamarafaa: element[15].toString());
                               });
+
                               Navigator.pop(context);
                             });
                       } else {
@@ -127,7 +128,6 @@ class _bulkUploadState extends State<bulkUpload> {
     if (result == null) return;
     // we will log the name, size and path of the
     // first picked file (if multiple are selected)
-    print(result.files.first.name);
     filePath = result.files.first.path!;
 
     final input = File(filePath!).openRead();
@@ -135,7 +135,6 @@ class _bulkUploadState extends State<bulkUpload> {
         .transform(utf8.decoder)
         .transform(const CsvToListConverter())
         .toList();
-    print(fields);
     if (fields.isNotEmpty) {
       setState(() {
         _data = fields;

@@ -1,6 +1,8 @@
+import 'dart:math';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
-import 'package:rfid_c72_plugin_example/model/firebase/data/get_modle.dart';
+import 'package:flutter/material.dart';
 import 'package:rfid_c72_plugin_example/model/firebase/flirebase_get.dart';
 
 class ProviderModel with ChangeNotifier {
@@ -12,6 +14,9 @@ class ProviderModel with ChangeNotifier {
 
   QuerySnapshot<Map<String, dynamic>>? usersOfData;
 
+  var userData;
+  var element;
+
   void increment(String c) {
     code = c;
     notifyListeners();
@@ -19,7 +24,7 @@ class ProviderModel with ChangeNotifier {
 
   void getDataUsers() async {
     QuerySnapshot<Map<String, dynamic>> users =
-        await FirebaseMethods.initAndGetData.get();
+        await FirebaseMethods().initAndGetData.get();
     usersOfData = users;
     notifyListeners();
   }
@@ -34,6 +39,13 @@ class ProviderModel with ChangeNotifier {
       tag3 = tag;
     }
     notifyListeners();
-    print(change);
+  }
+
+  void changevalueFromStrams({var user}) {
+    userData = user;
+  }
+
+  void changevalueFromElement({var element}) {
+    this.element = element;
   }
 }

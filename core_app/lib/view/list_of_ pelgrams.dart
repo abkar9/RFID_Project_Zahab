@@ -4,10 +4,10 @@ import 'package:rfid_c72_plugin_example/components/colors_theme.dart';
 import 'package:rfid_c72_plugin_example/components/custom_sizes.dart';
 import 'package:rfid_c72_plugin_example/components/string_values.dart';
 import 'package:rfid_c72_plugin_example/components/widgets/castom_appbar.dart';
-import 'package:rfid_c72_plugin_example/model/firebase/data/get_modle.dart';
 import 'package:rfid_c72_plugin_example/model/firebase/flirebase_get.dart';
 import 'package:rfid_c72_plugin_example/view/info_read_page.dart';
 
+// ignore: must_be_immutable
 class NameOfPelgrams extends StatelessWidget {
   NameOfPelgrams({super.key, required this.index});
   int index;
@@ -36,7 +36,7 @@ class NameOfPelgrams extends StatelessWidget {
             ),
             Expanded(
                 child: StreamBuilder<QuerySnapshot>(
-              stream: FirebaseMethods.initAndGetData.snapshots(),
+              stream: FirebaseMethods().initAndGetData.snapshots(),
               builder: (context, snapshot) {
                 if (snapshot.hasError) {
                   return Text('Error: ${snapshot.error}');

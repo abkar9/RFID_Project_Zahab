@@ -6,6 +6,7 @@ import 'package:rfid_c72_plugin_example/components/widgets/castom_appbar.dart';
 import '../components/widgets/custom_another_personal_info.dart';
 import '../components/widgets/custom_card_personal_info.dart';
 
+// ignore: must_be_immutable
 class InfoReadPage extends StatelessWidget {
   InfoReadPage({super.key, this.doc});
 

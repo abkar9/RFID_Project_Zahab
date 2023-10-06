@@ -16,6 +16,8 @@ dependencies:
   csv: ^5.0.1
   path_provider: ^2.0.10
   open_file: ^3.2.1
+  connectivity_plus: ^4.0.2
+
   cloud_firestore:
   flutter:
     sdk: flutter

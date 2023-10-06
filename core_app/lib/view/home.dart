@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rfid_c72_plugin_example/components/colors_theme.dart';
-import 'package:rfid_c72_plugin_example/rfid_scanner.dart';
+import 'package:rfid_c72_plugin_example/view/navPage/read_page.dart';
 import 'package:rfid_c72_plugin_example/view/navPage/addPage.dart';
 import 'package:rfid_c72_plugin_example/view/navPage/scanPage.dart';
 
@@ -26,7 +26,7 @@ class _MainPageState extends State<MainPage> {
   }
 
   @override
-  List<Widget> pages = const [RfidScanner(), ScanPage(), AddPage()];
+  List<Widget> pages = const [ReadPage(), ScanPage(), AddPage()];
   int currentIndex = 0;
   bool chick = false;
   void onTap(int index) {

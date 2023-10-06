@@ -4,19 +4,15 @@ import 'package:rfid_c72_plugin_example/components/widgets/custom_text.dart';
 import 'package:rfid_c72_plugin_example/provider/model_provider.dart';
 import 'package:rfid_c72_plugin_example/view/info_add_tag.dart';
 import 'package:provider/provider.dart';
-
 import '../custom_sizes.dart';
 
 TextEditingController _controller = TextEditingController();
-Widget customTextField(
-  BuildContext context, {
-  String? title,
-  TextAlign? textAlign = TextAlign.start,
-  Color? color,
-  double? size,
-}) {
-  var usersData =
-      Provider.of<ProviderModel>(context, listen: false).usersOfData;
+Widget customTextField(BuildContext context,
+    {String? title,
+    TextAlign? textAlign = TextAlign.start,
+    Color? color,
+    double? size,
+    var data}) {
   return Column(
     children: [
       Container(
@@ -61,13 +57,14 @@ Widget customTextField(
           ),
           onPressed: () async {
             if (_controller.text.isNotEmpty) {
-              usersData!.docs.forEach((element) {
+              data!.docs.forEach((element) {
                 if (element["idNumber"] == _controller.text) {
+                  Provider.of<ProviderModel>(context, listen: false)
+                      .changevalueFromElement(element: element);
+
                   Navigator.of(context).push(PageRouteBuilder(
                     pageBuilder: (context, animation, secondaryAnimation) =>
-                        InfoAddTag(
-                      doc: element,
-                    ),
+                        InfoAddTag(),
                   ));
                   _controller.clear();
                 } else if (_controller.text != element["idNumber"]) {}

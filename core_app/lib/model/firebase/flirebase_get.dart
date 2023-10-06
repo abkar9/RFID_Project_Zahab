@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:rfid_c72_plugin_example/model/firebase/data/get_modle.dart';
 
 class FirebaseMethods {
 /*  to init Firebase and to call Users docs method */
-  static var initAndGetData = FirebaseFirestore.instance.collection("users");
+  var initAndGetData = FirebaseFirestore.instance.collection("users");
+
   static var initAndGetDataTag =
       FirebaseFirestore.instance.collection("tagsCollection");
 
@@ -111,6 +111,19 @@ class FirebaseMethods {
       'tag1': tag1,
       'tag2': tag2,
       'tag3': tag3,
+    });
+  }
+
+////////////////////////////////////////////
+  Future<void> listOfTags({required String docTag}) async {
+    CollectionReference tag = FirebaseFirestore.instance.collection('tags');
+    await tag.doc(docTag).set({'tag': docTag});
+  }
+
+  Future getTges() async {
+    CollectionReference tag = FirebaseFirestore.instance.collection('tags');
+    await tag.get().then((value) {
+      return tag;
     });
   }
 }
