@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
 import java.util.Collections;
 
 import io.flutter.embedding.android.FlutterActivity;
@@ -12,77 +14,119 @@ import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.plugin.common.MethodChannel;
 
 public class MainActivity extends FlutterActivity {
-    private static final String CHANNEL_NAME = "rfid";
-
-    TextView number;
-    int count;
-    String data = "Hello from native Android!";
-
+    private static final String CHANNEL = "naser.com";
 
     @Override
-    public void configureFlutterEngine(FlutterEngine flutterEngine) {
+    public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
         super.configureFlutterEngine(flutterEngine);
-
-        // Register the method channel with the Flutter engine
-        new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), CHANNEL_NAME)
-                .setMethodCallHandler(
-                        (call, result) -> {
-                            if (call.method.equals("dispatchKeyEvent")) {
-                                // Retrieve the data sent from the Flutter side
-                                // Construct the data to be sent
-
-// Invoke the method channel and pass the data
-                                new MethodChannel(getFlutterEngine().getDartExecutor().getBinaryMessenger(), CHANNEL_NAME)
-                                        .invokeMethod("methodName", Collections.singletonMap("key", data));
-
-                                // Process the data as needed
-                                System.out.println("Received data: " + data);
-                            }
-                        }
-                );
+        new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), CHANNEL)
+                .setMethodCallHandler((call, result) -> {
+                    if (call.method.equals("getButtonEvent")) {
+                        sendButtonEventToFlutter(result.toString());
+                    } else {
+                        result.notImplemented();
+                    }
+                });
     }
-
-
 
     @Override
-    public boolean dispatchKeyEvent(KeyEvent event) {
-        int action, keycode;
-        action=event.getAction();
-        keycode=event.getKeyCode();
-
-        System.out.println("the action is : "+action);
-        System.out.println("the keycode is : "+keycode);
-
-
-        switch (action){
-            case 0:
-            {
-
-                if(KeyEvent.KEYCODE_VIDEO_APP_5==keycode){
-                    System.out.println("out act"+KeyEvent.KEYCODE_VIDEO_APP_5);
-                    System.out.println("the event is : "+event);
-
-
-                    count++;
-                    String num=String.valueOf(count);
-//                    number.setText(num);
-
-                }
-                break;
-            }
-            case 1:
-
-                if(KeyEvent.KEYCODE_VOLUME_DOWN==keycode){
-                    count--;
-                    String num=String.valueOf(count);
-//                    number.setText(num);
-                    System.out.println("the event issssssssssss : "+event);
-
-                }
-                break;
-
-
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
+            sendButtonEventToFlutter("Volume Up Pressed");
+            return true;
+        } else if (keyCode == KeyEvent.KEYCODE_VIDEO_APP_5) {
+            sendButtonEventToFlutter("KEYCODE VIDEO Pressed");
+            return true;
         }
-        return super.dispatchKeyEvent(event);
+        return super.onKeyDown(keyCode, event);
     }
+
+    private void sendButtonEventToFlutter(String buttonEvent) {
+        new MethodChannel(getFlutterEngine().getDartExecutor().getBinaryMessenger(), CHANNEL)
+                .invokeMethod("buttonEvent", buttonEvent);
+    }
+
+
+
+
+
+
+
+
+
+
+
+//    private static final String CHANNEL_NAME = "rfid";
+//
+//    TextView number;
+//    int count;
+//    String data = "Hello from native Android!";
+//
+//
+//    @Override
+//    public void configureFlutterEngine(FlutterEngine flutterEngine) {
+//        super.configureFlutterEngine(flutterEngine);
+//
+//        // Register the method channel with the Flutter engine
+//        new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), CHANNEL_NAME)
+//                .setMethodCallHandler(
+//                        (call, result) -> {
+//                            if (call.method.equals("dispatchKeyEvent")) {
+//                                // Retrieve the data sent from the Flutter side
+//                                // Construct the data to be sent
+//
+//// Invoke the method channel and pass the data
+//                                new MethodChannel(getFlutterEngine().getDartExecutor().getBinaryMessenger(), CHANNEL_NAME)
+//                                        .invokeMethod("methodName", Collections.singletonMap("key", data));
+//
+//                                // Process the data as needed
+//                                System.out.println("Received data: " + data);
+//                            }
+//                        }
+//                );
+//    }
+//
+//
+//
+//    @Override
+//    public boolean dispatchKeyEvent(KeyEvent event) {
+//        int action, keycode;
+//        action=event.getAction();
+//        keycode=event.getKeyCode();
+//
+//        System.out.println("the action is : "+action);
+//        System.out.println("the keycode is : "+keycode);
+//
+//
+//        switch (action){
+//            case 0:
+//            {
+//
+//                if(KeyEvent.KEYCODE_VIDEO_APP_5==keycode){
+//                    System.out.println("out act"+KeyEvent.KEYCODE_VIDEO_APP_5);
+//                    System.out.println("the event is : "+event);
+//
+//
+//                    count++;
+//                    String num=String.valueOf(count);
+////                    number.setText(num);
+//
+//                }
+//                break;
+//            }
+//            case 1:
+//
+//                if(KeyEvent.KEYCODE_VOLUME_DOWN==keycode){
+//                    count--;
+//                    String num=String.valueOf(count);
+////                    number.setText(num);
+//                    System.out.println("the event issssssssssss : "+event);
+//
+//                }
+//                break;
+//
+//
+//        }
+//        return super.dispatchKeyEvent(event);
+//    }
 }

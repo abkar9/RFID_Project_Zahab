@@ -10,8 +10,8 @@
         <option name="modules">
           <set>
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/cloud_firestore-4.8.3/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/connectivity_plus-4.0.2/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/file_picker-4.6.1/android" />
-            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/firebase_auth-4.7.1/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/firebase_core-2.15.0/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.15/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/open_file-3.2.1/android" />
