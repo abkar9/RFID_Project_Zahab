@@ -19,7 +19,6 @@ class RfidScanner extends StatefulWidget {
 }
 
 class _RfidScannerState extends State<RfidScanner> {
-  MethodChannel channel = MethodChannel('rfid');
 
   String _platformVersion = 'Unknown';
   bool _isConnected = false;
@@ -74,13 +73,14 @@ class _RfidScannerState extends State<RfidScanner> {
 
   @override
   Widget build(BuildContext context) {
+    MethodChannel channel = MethodChannel('rfid');
+
     var usersData =
         Provider.of<ProviderModel>(context, listen: false).usersOfData;
     channel.setMethodCallHandler((MethodCall call) async {
       if (call.method == 'dispatchKeyEvent') {
         // Retrieve the data sent from the native side
         String data = call.arguments['key'];
-
         // Process the data as needed
         print('Received data: $data');
       }

@@ -30,10 +30,9 @@ public class MainActivity extends FlutterActivity {
                             if (call.method.equals("dispatchKeyEvent")) {
                                 // Retrieve the data sent from the Flutter side
                                 // Construct the data to be sent
-
-// Invoke the method channel and pass the data
+                                // Invoke the method channel and pass the data
                                 new MethodChannel(getFlutterEngine().getDartExecutor().getBinaryMessenger(), CHANNEL_NAME)
-                                        .invokeMethod("methodName", Collections.singletonMap("key", data));
+                                        .invokeMethod("dispatchKeyEvent", Collections.singletonMap("key", data));
 
                                 // Process the data as needed
                                 System.out.println("Received data: " + data);
@@ -61,7 +60,6 @@ public class MainActivity extends FlutterActivity {
                 if(KeyEvent.KEYCODE_VIDEO_APP_5==keycode){
                     System.out.println("out act"+KeyEvent.KEYCODE_VIDEO_APP_5);
                     System.out.println("the event is : "+event);
-
 
                     count++;
                     String num=String.valueOf(count);
