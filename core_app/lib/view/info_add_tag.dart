@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rfid_c72_plugin/rfid_c72_plugin.dart';
@@ -38,6 +40,9 @@ class _InfoAddTagState extends State<InfoAddTag> {
     super.initState();
     initPlatformState();
     FirebaseMethods().initAndGetData;
+    FirebaseMethods().initTags.get().then((QuerySnapshot querySnapshot) {
+      tags = querySnapshot.docs;
+    });
     FirebaseMethods.initAndGetDataTag;
   }
 
@@ -65,6 +70,10 @@ class _InfoAddTagState extends State<InfoAddTag> {
     });
   }
 
+  var tags = [];
+
+  bool isTagAlreadyUsed = false;
+
   List<TagEpc> _data = [];
 
   final List<String> _EPC = [];
@@ -88,11 +97,11 @@ class _InfoAddTagState extends State<InfoAddTag> {
   @override
   Widget build(BuildContext context) {
     var usersData = Provider.of<ProviderModel>(context, listen: false);
-    FirebaseMethods().initAndGetData;
     CustomSizes().init;
     String code = "الكود بعد المسح";
-    var pro = Provider.of<ProviderModel>(context).change;
+    var numberOfTag = Provider.of<ProviderModel>(context).change;
     var doc = Provider.of<ProviderModel>(context).element;
+
     String t1 = "${doc["tag1"]}";
     String t2 = "${doc["tag2"]}";
     String t3 = "${doc["tag3"]}";
@@ -160,6 +169,19 @@ class _InfoAddTagState extends State<InfoAddTag> {
                   Provider.of<ProviderModel>(context, listen: false)
                       .increment(_data.first.epc);
                   _data.clear();
+                  for (var element in tags) {
+                    print(element['tag'] + ';lkjhgfdfghjkl');
+                    if (element['tag'].toString() == tagCode.toString()) {
+                      setState(() {
+                        isTagAlreadyUsed = true;
+                      });
+                      break;
+                    } else {
+                      setState(() {
+                        isTagAlreadyUsed = false;
+                      });
+                    }
+                  }
                 } else {
                   showBottom(context, text: "فشل المسح ");
                 }
@@ -176,23 +198,34 @@ class _InfoAddTagState extends State<InfoAddTag> {
                     textContent: "هل انت متأكد من اضافة التاق",
                     textButton: "موافق",
                     onPressed: () {
-                      firebaseFirestore.addData(
-                          tag: tagCode.toString(),
-                          doc: "${doc["idNumber"]}".toString(),
-                          numberOfTag: "${pro.toString()}");
-                      Provider.of<ProviderModel>(context, listen: false)
-                          .increment(code);
-                      Provider.of<ProviderModel>(context, listen: false)
-                          .changeValue(
-                              chick: pro.toString(), tag: tagCode.toString());
-                      _EPC.clear();
-                      Navigator.of(context).pushAndRemoveUntil(
-                          PageRouteBuilder(
-                            pageBuilder:
-                                (context, animation, secondaryAnimation) =>
-                                    InfoReadPage(doc: doc),
-                          ),
-                          (route) => true);
+                      if (tags.isNotEmpty && isTagAlreadyUsed) {
+                        firebaseFirestore.addData(
+                            tag: tagCode.toString(),
+                            doc: "${doc["idNumber"]}".toString(),
+                            numberOfTag: "${numberOfTag.toString()}");
+
+                        firebaseFirestore.addUserTag(
+                            docTag: tagCode.toString());
+
+                        Provider.of<ProviderModel>(context, listen: false)
+                            .increment(code);
+                        Provider.of<ProviderModel>(context, listen: false)
+                            .changeTagValue(
+                                chick: numberOfTag.toString(),
+                                tag: tagCode.toString());
+                        _EPC.clear();
+                        Navigator.pop(context);
+                        Navigator.of(context).pushAndRemoveUntil(
+                            PageRouteBuilder(
+                              pageBuilder:
+                                  (context, animation, secondaryAnimation) =>
+                                      InfoReadPage(doc: doc),
+                            ),
+                            (route) => true);
+                      } else {
+                        Navigator.pop(context);
+                        showBottom(context, text: "التاق مستخدام ");
+                      }
                     });
               } else {
                 showBottom(context, text: "يجب مسح التاق ");
