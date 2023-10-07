@@ -11,9 +11,9 @@ import '../custom_sizes.dart';
 // custom card for personal information for ino pages
 Widget customTagsAdd(
   BuildContext context, {
-  String? tag1 = '',
-  String? tag2 = '',
-  String? tag3 = '',
+  String? tag1,
+  String? tag2,
+  String? tag3,
 }) {
   CustomSizes().init(context);
 
@@ -41,7 +41,7 @@ Widget customTagsAdd(
                 GestureDetector(
                   onTap: () {
                     Provider.of<ProviderModel>(context, listen: false)
-                        .changeValue(chick: '1', tag: '');
+                        .changeTagValue(chick: '1', tag: '');
                   },
                   child: Container(
                     color: Provider.of<ProviderModel>(context, listen: true)
@@ -60,7 +60,10 @@ Widget customTagsAdd(
                         customText2(
                             text: tag1!.isEmpty
                                 ? "متاح"
-                                : tag1.hashCode.toString(),
+                                : Provider.of<ProviderModel>(context,
+                                            listen: true)
+                                        .tag1 ??
+                                    'متاح',
                             fontSize: CustomSizes.textSize,
                             textColor: Provider.of<ProviderModel>(context,
                                             listen: true)
@@ -75,7 +78,7 @@ Widget customTagsAdd(
                 GestureDetector(
                   onTap: () {
                     Provider.of<ProviderModel>(context, listen: false)
-                        .changeValue(chick: '2', tag: '');
+                        .changeTagValue(chick: '2', tag: '');
                   },
                   child: Container(
                     color: Provider.of<ProviderModel>(context, listen: true)
@@ -94,7 +97,10 @@ Widget customTagsAdd(
                         customText2(
                             text: tag2!.isEmpty
                                 ? "متاح"
-                                : tag2.hashCode.toString(),
+                                : Provider.of<ProviderModel>(context,
+                                            listen: true)
+                                        .tag2 ??
+                                    'متاح',
                             fontSize: CustomSizes.textSize,
                             textColor: Provider.of<ProviderModel>(context,
                                             listen: true)
@@ -109,7 +115,7 @@ Widget customTagsAdd(
                 GestureDetector(
                   onTap: () {
                     Provider.of<ProviderModel>(context, listen: false)
-                        .changeValue(chick: '3', tag: '');
+                        .changeTagValue(chick: '3', tag: '');
                   },
                   child: Container(
                     color: Provider.of<ProviderModel>(context, listen: true)
@@ -128,7 +134,10 @@ Widget customTagsAdd(
                         customText2(
                             text: tag3!.isEmpty
                                 ? "متاح"
-                                : tag3.hashCode.toString(),
+                                : Provider.of<ProviderModel>(context,
+                                            listen: true)
+                                        .tag3 ??
+                                    'متاح',
                             fontSize: CustomSizes.textSize,
                             textColor: Provider.of<ProviderModel>(context,
                                             listen: true)
