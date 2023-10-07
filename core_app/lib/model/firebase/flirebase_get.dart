@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class FirebaseMethods {
 /*  to init Firebase and to call Users docs method */
   var initAndGetData = FirebaseFirestore.instance.collection("users");
+  var initTags = FirebaseFirestore.instance.collection("tags");
 
   static var initAndGetDataTag =
       FirebaseFirestore.instance.collection("tagsCollection");
@@ -115,15 +116,13 @@ class FirebaseMethods {
   }
 
 ////////////////////////////////////////////
-  Future<void> listOfTags({required String docTag}) async {
+  Future<void> addUserTag({required String docTag}) async {
     CollectionReference tag = FirebaseFirestore.instance.collection('tags');
     await tag.doc(docTag).set({'tag': docTag});
   }
 
   Future getTges() async {
-    CollectionReference tag = FirebaseFirestore.instance.collection('tags');
-    await tag.get().then((value) {
-      return tag;
-    });
+    var tag = await initTags.get();
+    return tag;
   }
 }

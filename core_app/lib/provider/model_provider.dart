@@ -8,14 +8,16 @@ import 'package:rfid_c72_plugin_example/model/firebase/flirebase_get.dart';
 class ProviderModel with ChangeNotifier {
   String code = 'الكود بعد المسح';
   String change = "1";
-  String tag1 = 'متاح';
-  String tag2 = "متاح";
-  String tag3 = "متاح";
+  String? tag1;
+  String? tag2;
+  String? tag3;
 
   QuerySnapshot<Map<String, dynamic>>? usersOfData;
 
   var userData;
   var element;
+
+  void changeTagProvider({required String value, required int numberOfTag}) {}
 
   void increment(String c) {
     code = c;
@@ -29,7 +31,7 @@ class ProviderModel with ChangeNotifier {
     notifyListeners();
   }
 
-  void changeValue({required String chick, required String tag}) {
+  void changeTagValue({required String chick, required String tag}) {
     change = chick;
     if (chick == "1") {
       tag1 = tag;
