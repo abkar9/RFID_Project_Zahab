@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +10,8 @@ class ProviderModel with ChangeNotifier {
   String? tag2;
   String? tag3;
 
+  bool isRead = false;
+
   QuerySnapshot<Map<String, dynamic>>? usersOfData;
 
   var userData;
@@ -21,6 +21,11 @@ class ProviderModel with ChangeNotifier {
 
   void increment(String c) {
     code = c;
+    notifyListeners();
+  }
+
+  void changeVauleIsRead(bool chick) {
+    isRead = chick;
     notifyListeners();
   }
 

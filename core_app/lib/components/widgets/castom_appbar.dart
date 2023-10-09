@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rfid_c72_plugin_example/view/addData/add_flis_firebase.dart';
 import 'package:rfid_c72_plugin_example/view/home.dart';
+import 'package:rfid_c72_plugin_example/view/info_read_page.dart';
+import 'package:rfid_c72_plugin_example/view/navPage/read_page.dart';
 
 AppBar appBar(
     {required String title,
@@ -52,10 +54,8 @@ AppBar backAppBar({
     actions: [
       IconButton(
           onPressed: () {
-            Navigator.of(context).pushAndRemoveUntil(PageRouteBuilder(
-              pageBuilder: (context, animation, secondaryAnimation) =>
-                  MainPage(),
-            ),(route) => true,);          },
+            Navigator.of(context).pop();
+          },
           icon: Icon(
             Icons.arrow_forward,
             size: 30,

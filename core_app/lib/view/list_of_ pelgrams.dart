@@ -14,7 +14,6 @@ class NameOfPelgrams extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<DocumentSnapshot<Object?>> getQuery = [];
     CustomSizes().init(context);
     return Scaffold(
         appBar: backAppBar(title: "قائمة الحجاج", context: context),
