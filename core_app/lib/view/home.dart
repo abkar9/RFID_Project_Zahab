@@ -26,6 +26,7 @@ class _MainPageState extends State<MainPage> {
   }
 
   @override
+  // ignore: override_on_non_overriding_member
   List<Widget> pages = const [ReadPage(), ScanPage(), AddPage()];
   int currentIndex = 0;
   bool chick = false;

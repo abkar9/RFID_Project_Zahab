@@ -1,6 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
-
 class ModelGet {
   String almajlis; // المجلس
   String name; // الاسم

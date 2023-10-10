@@ -1,6 +1,5 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:rfid_c72_plugin/rfid_c72_plugin.dart';
 import 'package:rfid_c72_plugin/tag_epc.dart';
@@ -12,7 +11,6 @@ import 'package:rfid_c72_plugin_example/components/widgets/custom_column_is_not_
 import 'package:rfid_c72_plugin_example/components/widgets/show_bottom_sheet.dart';
 import 'package:rfid_c72_plugin_example/model/firebase/flirebase_get.dart';
 import 'package:rfid_c72_plugin_example/provider/model_provider.dart';
-import 'package:rfid_c72_plugin_example/view/info_read_page.dart';
 import 'package:provider/provider.dart';
 
 class ReadPage extends StatefulWidget {
@@ -28,44 +26,47 @@ class _ReadPageState extends State<ReadPage> {
   String platformVersion = 'Unknown';
   bool isConnected = false;
   bool isLoading = true;
-  String? tagData ;
+  String? tagData;
   int totalEPC = 0, invalidEPC = 0, scannedEPC = 0;
   FirebaseMethods firebaseFirestore = FirebaseMethods();
   static const platform = const MethodChannel('naser.com');
-  String _buttonEvent = '';
+  bool buttonEvent = false;
   List<TagEpc> _data = [];
+  List<TagEpc> em = [];
+  // var userData;
+  String tagCode = '';
 
   @override
   void initState() {
     super.initState();
-    rusles == null ? chickInternet() : null;
+    _data.clear();
+    rusles = chickInternet();
     initPlatformState();
     FirebaseMethods().initAndGetData;
     _setupButtonListener();
-
   }
+
   //call native press code
   Future<void> _setupButtonListener() async {
     platform.setMethodCallHandler((call) async {
       if (call.method == 'buttonEvent') {
-
-          _buttonEvent = call.arguments as String;
-
-           RfidC72Plugin.startSingle.then((value) {
-            if (_data.isNotEmpty) {
-
-                tagData= _data.first.epc;
-
-                _data.clear();
-            } else {
-              showBottom(context);
-            }
-
+        RfidC72Plugin.startSingle.then((value) {
+          if (_data.isNotEmpty) {
+            setState(() {
+              tagData = _data.first.epc;
+              buttonEvent = true;
+              _data.clear();
+            });
+          } else {
+            showBottom(context);
+          }
         });
       }
     });
   }
+
   // Platform messages are asynchronous, so we initialize in an async method.
+
   Future<void> initPlatformState() async {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
@@ -82,12 +83,12 @@ class _ReadPageState extends State<ReadPage> {
     await RfidC72Plugin.setWorkArea('-40');
     await RfidC72Plugin.setPowerLevel('8');
     if (!mounted) return;
+
     setState(() {
       platformVersion = platformVersion;
       isLoading = false;
     });
   }
-
 
   void updateTags(dynamic result) async {
     setState(() {
@@ -97,14 +98,17 @@ class _ReadPageState extends State<ReadPage> {
   }
 
   void updateIsConnected(dynamic isConnected) {
-    isConnected = isConnected;
+    setState(() {
+      isConnected = isConnected;
+    });
   }
 
   @override
   Widget build(BuildContext cont) {
-    var usersData =
-        Provider.of<ProviderModel>(cont, listen: false).usersOfData;
-
+    print(_data.length);
+    var usersData = Provider.of<ProviderModel>(
+      cont,
+    ).usersOfData;
 
     return StreamBuilder<ConnectivityResult>(
         stream: Connectivity().onConnectivityChanged,
@@ -116,122 +120,98 @@ class _ReadPageState extends State<ReadPage> {
               body: customColumnIsNotData(),
             );
           } else {
-
-
-            print('object');
-
-
-            if (usersData!.docs.isNotEmpty) {
-              usersData.docs.forEach((element) {
-                if (element["tag1"] == tagData) {
-                  tagData='';
-
-
-                  Navigator.of(cont).push(PageRouteBuilder(
-                    pageBuilder: (_, animation,
-                        secondaryAnimation) =>
-                        InfoReadPage(
-                          doc: element,
-                        ),
-                  ));
-
-
-
-                } else if (element["tag2"] == tagData) {
-                  tagData='';
-
-                  // Navigator.of(cont).push(PageRouteBuilder(
-                  //   pageBuilder: (context, animation,
-                  //       secondaryAnimation) =>
-                  //       InfoReadPage(
-                  //         doc: element,
-                  //       ),
-                  // ));
-                } else if (element["tag3"] == tagData) {
-
-                  tagData='';
-
-                  // Navigator.of(cont).push(PageRouteBuilder(
-                  //   pageBuilder: (context, animation,
-                  //       secondaryAnimation) =>
-                  //       InfoReadPage(
-                  //         doc: element,
-                  //       ),
-                  // ));
-                }
-              });
-            }
-
-
             return Scaffold(
-              //////////////////////////////////////////////////////////
-              floatingActionButton: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  // FloatingActionButton(
-                  //     backgroundColor: ColorThemeRFID.brown,
-                  //     child: Icon(Icons.add),
-                  //     onPressed: () async {
-                  //       await RfidC72Plugin.startSingle.then((value) {
-                  //         if (_data.isNotEmpty) {
-                  //           String tagData = _data.first.epc;
-                  //           print(tagData);
-                  //           if (usersData!.docs.isNotEmpty) {
-                  //             usersData.docs.forEach((element) {
-                  //               if (element["tag1"] == tagData) {
-                  //                 Navigator.of(context).push(PageRouteBuilder(
-                  //                   pageBuilder: (context, animation,
-                  //                           secondaryAnimation) =>
-                  //                       InfoReadPage(
-                  //                     doc: element,
-                  //                   ),
-                  //                 ));
-                  //               } else if (element["tag2"] == tagData) {
-                  //                 Navigator.of(context).push(PageRouteBuilder(
-                  //                   pageBuilder: (context, animation,
-                  //                           secondaryAnimation) =>
-                  //                       InfoReadPage(
-                  //                     doc: element,
-                  //                   ),
-                  //                 ));
-                  //               } else if (element["tag3"] == tagData) {
-                  //                 Navigator.of(context).push(PageRouteBuilder(
-                  //                   pageBuilder: (context, animation,
-                  //                           secondaryAnimation) =>
-                  //                       InfoReadPage(
-                  //                     doc: element,
-                  //                   ),
-                  //                 ));
-                  //               }
-                  //             });
-                  //           }
-                  //           _data.clear();
-                  //         } else {
-                  //           showBottom(context);
-                  //         }
-                  //       });
-                  //     }),
-                ],
-              ),
+                ////////////////////////////////////////////////////
+                floatingActionButton: FloatingActionButton(
+                    backgroundColor: ColorThemeRFID.brown,
+                    child: Icon(Icons.add),
+                    onPressed: () async {
+                      RfidC72Plugin.startSingle.then((value) {
+                        if (value!) {
+                          print(value);
+                          RfidC72Plugin.tagsStatusStream
+                              .receiveBroadcastStream()
+                              .listen(updateTags);
+                          setState(() {
+                            tagCode = _data.first.epc;
+                          });
+                          Provider.of<ProviderModel>(context, listen: false)
+                              .increment(_data.first.epc);
+                          _data.clear();
+                          print(_data.first.epc);
 
-              body: Container(
-                      child: Center(
-                        child: SizedBox(
-                height: CustomSizes.height! / 2,
-                child: Lottie.asset(
-                  'assets/lottie/ppixZ5u3t6.json',
-                ),
-              ),
-                      ),));
-
-
+                          _data.forEach((element) {
+                            print(element.epc);
+                          });
+                        } else {
+                          showBottom(context, text: "فشل المسح ");
+                        }
+                      });
+                    }),
+                body:
+                    customShowUserAfterRead(userData: usersData, context: cont)
+                // : Container(
+                //     child: Center(
+                //       child: SizedBox(
+                //         height: CustomSizes.height! / 2,
+                //         child: Lottie.asset(
+                //           'assets/lottie/ppixZ5u3t6.json',
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                );
           }
         });
   }
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    super.dispose();
-    tagData='';
+
+  Widget customShowUserAfterRead(
+      {required var userData, required BuildContext context}) {
+    // if (buttonEvent) {
+    //   try {
+    //     if (userData!.docs.isNotEmpty) {
+    //       for (var element in userData.docs) {
+    //         if (element["tag1"] == tagData) {
+    //           print(tagData);
+    //           userData = element;
+    //           Provider.of<ProviderModel>(context, listen: false)
+    //               .changeVauleIsRead(true);
+    //           tagData = '';
+    //           break;
+    //         } else if (element["tag2"] == tagData) {
+    //           print(tagData);
+    //           userData = element;
+    //           Provider.of<ProviderModel>(context, listen: false)
+    //               .changeVauleIsRead(true);
+    //           tagData = '';
+    //           break;
+    //         } else if (element["tag3"] == tagData) {
+    //           print(tagData);
+    //           userData = element;
+    //           Provider.of<ProviderModel>(context, listen: false)
+    //               .changeVauleIsRead(true);
+    //           tagData = '';
+    //           break;
+    //         }
+    //       }
+    //     }
+    //   } catch (e) {}
+    //   setState(() {
+    //     buttonEvent = false;
+    //   });
+    // }
+
+    return Center(
+        child: ElevatedButton.icon(
+            onPressed: () {
+              setState(() {});
+              buttonEvent = false;
+              _data.clear();
+              Provider.of<ProviderModel>(context, listen: false).increment('');
+            },
+            icon: Icon(Icons.grass_outlined),
+            label: Text(Provider.of<ProviderModel>(
+              context,
+            ).code.toString())));
   }
 }
